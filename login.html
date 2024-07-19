@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="sheet.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            <div class="logo">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact" class="contact">
+        <form id="form" onsubmit="return Login(event)">
+            <div class="form1">
+                <label>Email Address: </label>
+                <input id="email" type="email">
+                <span class="error" id="emailerror" style="color: red;"></span>
+            </div>
+            <div class="form1">
+                <label>Password: </label>
+                <input id="password" type="password">
+                <span class="error" id="perror" style="color: red;"></span>
+            </div>
+            <input type="submit" name="Submit" value="Login">
+        </form>
+    </section>
+</body>
+</html>
