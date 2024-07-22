@@ -7,7 +7,7 @@
 body {
     margin: auto;
     background-color: wheat;
-    background-image: url(img/cafe.jpg);
+    background-image: url(/Fleetpandassh/img/cafe.jpg);
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
 }
