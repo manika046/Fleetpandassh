@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/Fleetpandassh/css/login.css">
-  <script src="../script/login.js"></script>
+  <title>LOGIN Page</title>
+  <link rel="stylesheet" href="../css/login.css">
 </head>
 
 <body>
   <div class="login">
-    <form id="form" onsubmit="return Login(event)">
+    <form id="form">
       <h1>LOGIN</h1>
       <div class="form1">
         <label>User Name: </label>
@@ -23,10 +22,16 @@
         <input id="email" type="email">
         <span class="error" id="emailerror" style="color: red;"></span>
       </div>
+      <div class="form1">
+        <label>Password: </label>
+        <input id="password" type="password">
+        <span class="error" id="perror" style="color: red;"></span>
+      </div>
       <input type="submit" name="Submit" value="Login">
-      <p><a href="signin.html">create an account?</a></p>
+      <p>Don't have account? <a href="signin.html">SIGN IN</a></p>
     </form>
   </div>
+  <script type="module" src="../script/login.js"></script>
 </body>
 
 </html>

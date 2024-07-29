@@ -5,11 +5,19 @@
   body {
     background-color: #222;
   }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: blue;
+  }
   
   .login {
     display: flex;
     align-items: center;
-    padding: 2rem 5%;
+    padding: 2rem;
     width: 100%;
     justify-content: space-evenly;
     text-align: left;
@@ -25,7 +33,7 @@
     border-radius: 10px;
     width: 90%;
     max-width: 400px;
-    height: 300px;
+    height: 400px;
   }
   
   .login form input {

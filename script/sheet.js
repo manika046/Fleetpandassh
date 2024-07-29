@@ -3,11 +3,11 @@ function validateform() {
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
 
-  let isvalid = true;
+  let isValid = true;
 
-  if (name === null || name === "") {
+  if (name === null || name.trim() === "") {
     document.getElementById('nameerror').innerText = "Name is required";
-    isvalid = false;
+    isValid = false;
   } else {
     document.getElementById('nameerror').innerText = "";
   }
@@ -15,29 +15,32 @@ function validateform() {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (email === "") {
     document.getElementById("emailerror").innerText = "Email is required.";
-    isvalid = false;
+    isValid = false;
   } else if (!emailPattern.test(email)) {
     document.getElementById("emailerror").innerText = "Invalid email format.";
-    isvalid = false;
+    isValid = false;
   } else {
     document.getElementById("emailerror").innerText = "";
   }
 
-  if (message === null || message === "") {
+  if (message === null || message.trim() === "") {
     document.getElementById('merror').innerText = "Message is required";
-    isvalid = false;
+    isValid = false;
   } else {
     document.getElementById('merror').innerText = "";
   }
 
-  if (isvalid) {
-    document.getElementById("form").onsubmit
-  }
+  if (isValid) {
+    const formData = {
+      name: name,
+      email: email,
+      message: message,
+    };
+    alert(JSON.stringify(formData));
 
-  const formdata = {
-    name: name,
-    email: email,
-    message: message,
-  };
-  alert(JSON.stringify(formdata));
+    return true;
+  } else {
+    return false;
+  }
 }
+document.getElementById('form').onsubmit = validateform;

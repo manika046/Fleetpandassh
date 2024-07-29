@@ -1,3 +1,5 @@
+import { request } from "./request.js";
+
 function formvalidate(event) {
   event.preventDefault();
 
@@ -37,26 +39,32 @@ function formvalidate(event) {
   }
 
   if (valid) {
-    const formdata = {
-      name : name,
-      email : email,
-      password : password
-    };
+    request("https://jsonplaceholder.typicode.com/users", "POST", data, {
+      name,
+      email,
+      password
+    });
+    // const formdata = {
+    //   name : name,
+    //   email : email,
+    //   password : password
+    // };
 
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-      method: 'POST',
-      body: JSON.stringify(formdata),
+  //   fetch('https://jsonplaceholder.typicode.com/posts', {
+  //     method: 'POST',
+  //     body: JSON.stringify(formdata),
       
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    })
-      .then((response) => response.json())
-      .then((json) => console.log(json));
-    window.location = "login.html";
-  }
+  //     headers: {
+  //       'Content-type': 'application/json; charset=UTF-8',
+  //     },
+  //   })
+  //     .then((response) => response.json())
+  //     .then((json) => console.log(json));
+  //   window.location = "login.html";
+  // }
 }
 
 function cancelForm() {
   window.location = "../index.html";
+}
 }
